@@ -1,8 +1,11 @@
-body {
-    position: relatabive;
-    background-color: #372294; /* Cor de fundo caso a imagem não carregue */
+*{
     margin: 0;
     padding: 0;
+}
+
+body {
+    position: relative;
+    background-color: #372294; /* Cor de fundo caso a imagem não carregue */
     width: 100vw;
     height: 100vh; /* Garante que cubra a tela inteira */
     overflow: hidden; /* Evita rolagem desnecessária */
@@ -23,7 +26,6 @@ body {
         background-size: cover;
         opacity: 0.25;
         z-index: -1; 
-
         
     }
 
@@ -40,7 +42,7 @@ body {
         position: absolute;
         left: 336px; 
         top: 0px;  
-
+        
     }
 
     #player1 {
@@ -75,6 +77,4 @@ body {
         
     }
 
-    #gon {
-        
-    }
+    
