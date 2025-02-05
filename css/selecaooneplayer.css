@@ -1,80 +1,103 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-    position: relative;
-    background-color: #372294; /* Cor de fundo caso a imagem não carregue */
-    width: 100vw;
-    height: 100vh; /* Garante que cubra a tela inteira */
-    overflow: hidden; /* Evita rolagem desnecessária */
-    display:flex;
+    background-color: #372294;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* Garante que os itens fiquem empilhados */
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     justify-content: center;
-    
+    font-family: "Press Start 2P", sans-serif;
+    /* Definição global da fonte */
 }
 
-    body::before {
-        
-        content: "";
-        position: relative;
-        left: -11;
-        top: 0;
-        width: 100%; height: 100%;
-        background: url('assets/fundo.jpg')no-repeat center fixed; /* Teste se a camada aparece */
-        background-size: cover;
-        opacity: 0.25;
-        z-index: -1; 
-        
-    }
+body::before {
+    content: "";
+    position: absolute;
+    /* Mantém o fundo fixo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: -1;
+    /* Mantém o fundo atrás do conteúdo */
+}
 
-    h1{
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        text-align: center;
-        font-family: "Press Start 2P", serif;
-        font-weight: 768px;
-        font-style: normal;
-        font-size: 48px;
-        color: #AAC5A9;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 1px;
-        position: absolute;
-        left: 336px; 
-        top: 0px;  
-        
-    }
+h1 {
+    font-family: "Press Start 2P", serif;
+    font-size: 48px;
+    color: #AAC5A9;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 32%;
+}
 
-    #player1 {
+#player1 {
+    font-family: "Press Start 2P", serif;
+    font-size: 36px;
+    color: #471EDA;
+    -webkit-text-stroke: 1px black;
+    position: absolute;
+    left: 264px;
+    /* Eixo X da borda esquerda */
+    top: 150px;
+    /* Eixo Y do topo */
+}
 
-        text-align: center;
-        font-family: "Press Start 2P", serif;
-        font-weight: 288px;
-        font-style: normal;
-        font-size: 36px;
-        color: #471EDA;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 1px;
-        position: absolute;
-        left: 264px;  /* Eixo X: 100px da borda esquerda */
-        top: 150px;    /* Eixo Y: 50px do topo */
+#machine {
+    font-family: "Press Start 2P", serif;
+    font-size: 36px;
+    color: #DA1E25;
+    -webkit-text-stroke: 1px black;
+    position: absolute;
+    left: 906px;
+    top: 150px;
+}
 
-    }
+#gon {
+    position: absolute;
+    width: 112px;
+    height: 140px;
+    left: 260px;
+    top: 600px;
+}
 
-    #machine {
+#killua {
+    position: absolute;
+    width: 76px;
+    height: 152px;
+    left: 476px;
+    top: 588px;
+}
 
-        text-align: center;
-        font-family: "Press Start 2P", serif;
-        font-weight: 252px;
-        font-style: normal;
-        font-size: 36px;
-        color: #DA1E25;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 1px;
-        position: absolute;
-        left: 906px; 
-        top: 150px;  
-        
-    }
+#pitou {
+    position: absolute;
+    width: 129px;
+    height: 192px;
+    left: 879px;
+    top: 416px;
+}
 
-    
+#maquina {
+    position: absolute;
+    width: 451px;
+    height: 216px;
+    scale: 1311px 372px;
+    transform: scaleX(-1); /* girar horizontalmente*/
+    display: inline-block; /* Garante que a transformação funcione corretamente */
+}
