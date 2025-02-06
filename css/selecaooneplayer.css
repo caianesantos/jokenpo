@@ -74,7 +74,7 @@ h1 {
     width: 112px;
     height: 140px;
     left: 260px;
-    top: 600px;
+    top: 440px;
 }
 
 #killua {
@@ -82,7 +82,7 @@ h1 {
     width: 76px;
     height: 152px;
     left: 476px;
-    top: 588px;
+    top: 430px;
 }
 
 #pitou {
@@ -90,14 +90,41 @@ h1 {
     width: 129px;
     height: 192px;
     left: 879px;
-    top: 416px;
+    top: 260px;
 }
 
 #maquina {
     position: absolute;
     width: 451px;
     height: 216px;
-    scale: 1311px 372px;
-    transform: scaleX(-1); /* girar horizontalmente*/
-    display: inline-block; /* Garante que a transformação funcione corretamente */
+    scale: 1311px;
+    top: 210px;
+    transform: scaleX(-1);
+    /* girar horizontalmente*/
+    display: inline-block;
+    /* Garante que a transformação funcione corretamente */
+}
+
+.line {
+    width: 464px;
+    height: 0px;
+    position: absolute;
+    /* Necessário para usar top/left */
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    /* Centraliza e rotaciona */
+    border: 2px solid #AAC5A9;
+}
+
+.seta {
+    position: absolute;
+    left: 300px;
+    top: 390px;
+    font-family: "Press Start 2P", serif;
+    font-size: 36px;
+    color: #AAC5A9;
+    transform: rotate(90deg);
+    transform-origin: center;
+    -webkit-text-stroke: 1px black;
 }
